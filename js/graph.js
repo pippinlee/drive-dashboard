@@ -1,4 +1,4 @@
-var w = 200;
+var w = 220;
 var h = 100;
 
 var svg = d3.select("#line")
@@ -21,6 +21,13 @@ var x = d3.scale.linear().domain([0, fuelData.length]).range([0, w]);
 // Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
 var y = d3.scale.linear().domain([0, 0.4]).range([h, 0]);
 
+// add y axis
+var yAxis = d3.svg.axis()
+                  .scale(y)
+                  .orient("left")
+                  .ticks(4);
+
+
 var line = d3.svg.line()
   .interpolate("cardinal")
   .x(function(d,i) {return x(i);})
@@ -30,7 +37,15 @@ var path = svg.append("path")
   .attr("d", line(fuelData))
   .attr("stroke", "steelblue")
   .attr("stroke-width", "2")
+  .attr("transform", "translate(20,0)")
   .attr("fill", "none");
+
+
+var yAxisGroup = svg.append("g")
+                    .attr("class", "axis")
+                    .call(yAxis)
+                    .attr("stroke", "#999")
+                    .attr("transform", "translate(25,-7)");
 
 var totalLength = path.node().getTotalLength();
 
@@ -39,7 +54,7 @@ $('#start').on("click", function(){
     .attr("stroke-dasharray", totalLength + " " + totalLength)
     .attr("stroke-dashoffset", totalLength)
     .transition()
-      .duration(25500*3.5)
+      .duration(25500*3.2)
       .ease("linear")
       .attr("stroke-dashoffset", 1);
 });
@@ -61,7 +76,7 @@ $('#start').on("click", function(){
 
 // chart 2 ---------------------------------------------------------------
 
-var w = 200;
+var w = 225;
 var h = 100;
 
 var svg = d3.select("#linetwo")
@@ -85,6 +100,13 @@ var x = d3.scale.linear().domain([0, finalData.length]).range([0, w]);
 // Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
 var y = d3.scale.linear().domain([0, 125]).range([h, 0]);
 
+// add y axis
+var yAxis = d3.svg.axis()
+                  .scale(y)
+                  .orient("left")
+                  .ticks(4);
+
+
 var line = d3.svg.line()
   .interpolate("cardinal")
   .x(function(d,i) {return x(i);})
@@ -94,7 +116,16 @@ var graph = svg.append("path")
   .attr("d", line(finalData))
   .attr("stroke", "steelblue")
   .attr("stroke-width", "2")
+  .attr("transform", "translate(25,0)")
   .attr("fill", "none");
+
+
+var yAxisGroup = svg.append("g")
+                    .attr("class", "axis")
+                    .call(yAxis)
+                    .attr("stroke", "#999")
+                    .attr("transform", "translate(27,-7)");
+
 
 var totalLength = graph.node().getTotalLength();
 
@@ -115,7 +146,7 @@ $('#start').on("click", function(){
 
 // Chart 3 MILES PER GALLON ---------------------------------------------------------------
 
-var w = 200;
+var w = 225;
 var h = 100;
 
 var svg = d3.select("#linethree")
@@ -139,6 +170,14 @@ var x = d3.scale.linear().domain([0, finalAccelData.length]).range([0, w]);
 // Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
 var y = d3.scale.linear().domain([0, 160]).range([h, 0]);
 
+
+// add y axis
+var yAxis = d3.svg.axis()
+                  .scale(y)
+                  .orient("left")
+                  .ticks(2);
+
+
 var line = d3.svg.line()
   .interpolate("cardinal")
   .x(function(d,i) {return x(i);})
@@ -148,7 +187,17 @@ var graphTwo = svg.append("path")
   .attr("d", line(finalAccelData))
   .attr("stroke", "steelblue")
   .attr("stroke-width", "1.7")
+  .attr("transform", "translate(23,0)")
   .attr("fill", "none");
+
+
+var yAxisGroup = svg.append("g")
+                    .attr("class", "axis")
+                    .call(yAxis)
+                    .attr("stroke", "#999")
+                    .attr("transform", "translate(27,-5)");
+
+
 
 var totalLength = graphTwo.node().getTotalLength();
 
@@ -157,7 +206,7 @@ $('#start').on("click", function(){
     .attr("stroke-dasharray", totalLength + " " + totalLength)
     .attr("stroke-dashoffset", totalLength)
     .transition()
-      .duration(25500/3)
+      .duration(25500/2.5)
       .ease("linear")
       .attr("stroke-dashoffset", 1);
 });

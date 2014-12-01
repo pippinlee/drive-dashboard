@@ -6,7 +6,7 @@ Weekend fun to mashup driving data with Leaflet.js and d3.js.
 
 Clicking the "drive" car button animates the driving path and charts.
 
-![driving dashboard](https://cldup.com/6TekvW-DY2.png)
+![driving dashboard](https://cldup.com/zbRS5zZ4qD.png)
 
 #### Uses:
 

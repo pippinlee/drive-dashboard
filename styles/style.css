@@ -6,7 +6,7 @@ body {
   margin: 0 auto;
   padding: 0;
   text-align: center;
-  width: 757px;
+  width: 500px;
   height: 499px;
   -webkit-box-shadow: 0 0 1px 1px #999;
   box-shadow: 0 0 1px 1px #999;
@@ -25,6 +25,11 @@ body {
   margin-left: 30px;
   height: 30px;
   padding-top: 5px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 #dashboard {
@@ -75,32 +80,6 @@ div#line, div#linetwo, div#linethree {
   color: white;
 }
 
-path {
-    stroke: steelblue;
-    stroke-width: 1;
-    fill: none;
-}
-
-.axis {
-  shape-rendering: crispEdges;
-}
-
-.x.axis line {
-  stroke: lightgrey;
-}
-
-.x.axis .minor {
-  stroke-opacity: .5;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.y.axis line, .y.axis path {
-  fill: none;
-  stroke: #000;
-}
 
 #accel {
   margin-top: 20px;
@@ -124,7 +103,7 @@ header h3 {
   padding-top: 20px;
   color: rgb(68, 215, 204);
   font-size: 32px;
-  width: 1000px;
+  width: 764px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 900;
 }
@@ -145,8 +124,14 @@ header h3 {
 }
 
 .btn-primary:hover {
-  background-color: #fff;
+  background-color:  rgb(44, 157, 148);
   border: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  
 }
 
 .btn-primary:focus {
@@ -158,4 +143,20 @@ section {
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: none;
+    shape-rendering: crispEdges;
+    margin-left: -20px;
+    padding-left: -20px
+}
+
+.axis text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 11px;
+    margin-left: -20px;
+    padding-left: -20px
 }
