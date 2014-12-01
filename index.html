@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Driving</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' />
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
+  <script src="js/animate.js"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.5.0"></script>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+
+  <header>
+    <h3>VROOM</h3>
+
+  </header>
+
+  <section>
+
+    <div id="dashboard">
+      <h3>Drive details <button type="button" id="start" class="btn btn-primary"></button></h3>
+
+      <h4 class="info">FUEL USED</h4>
+        <div id="line"></div>
+
+      <h4 class="info" id="speed">SPEED (KM/HR)</h4>
+        <div id="linetwo"></div>
+
+      <h4 class="info" id="mpg">MILES PER GALLON</h4>
+        <div id="linethree"></div>
+    </div>
+
+    <div id="map"></div>
+
+  </section>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/graph.js"></script>
+
+</body>
+</html>
