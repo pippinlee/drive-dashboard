@@ -6,7 +6,7 @@ body {
   margin: 0 auto;
   padding: 0;
   text-align: center;
-  width: 500px;
+  width: 757px;
   height: 499px;
   -webkit-box-shadow: 0 0 1px 1px #999;
   box-shadow: 0 0 1px 1px #999;
@@ -103,7 +103,7 @@ header h3 {
   padding-top: 20px;
   color: rgb(68, 215, 204);
   font-size: 32px;
-  width: 764px;
+  width: 1000px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 900;
 }

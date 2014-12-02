@@ -40,6 +40,16 @@ var path = svg.append("path")
   .attr("transform", "translate(20,0)")
   .attr("fill", "none");
 
+$(function() {
+    path
+    .attr("stroke-dasharray", totalLength + " " + totalLength)
+    .attr("stroke-dashoffset", totalLength)
+    .transition()
+      .duration(20000)
+      .ease("linear")
+      .attr("stroke-dashoffset", 1);
+});
+
 
 var yAxisGroup = svg.append("g")
                     .attr("class", "axis")
@@ -119,6 +129,15 @@ var graph = svg.append("path")
   .attr("transform", "translate(25,0)")
   .attr("fill", "none");
 
+$(function() {
+    graph
+    .attr("stroke-dasharray", totalLength + " " + totalLength)
+    .attr("stroke-dashoffset", totalLength)
+    .transition()
+      .duration(3950)
+      .ease("linear")
+      .attr("stroke-dashoffset", 1);
+});
 
 var yAxisGroup = svg.append("g")
                     .attr("class", "axis")
@@ -189,6 +208,16 @@ var graphTwo = svg.append("path")
   .attr("stroke-width", "1.7")
   .attr("transform", "translate(23,0)")
   .attr("fill", "none");
+
+$(function() {
+    graphTwo
+    .attr("stroke-dasharray", totalLength + " " + totalLength)
+    .attr("stroke-dashoffset", totalLength)
+    .transition()
+      .duration(2550)
+      .ease("linear")
+      .attr("stroke-dashoffset", 1);
+});
 
 
 var yAxisGroup = svg.append("g")
