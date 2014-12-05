@@ -2,7 +2,7 @@
 
 Weekend fun to mashup driving data with Leaflet.js and d3.js.
 
-**Demo: [pippinlee.com/d3](http://pippinlee.com/d3/)**
+**Demo: [pippinlee.com/driving-dashboard](http://pippinlee.com/driving-dashboard/)**
 
 Clicking the "drive" car button animates the driving path and charts.
 
